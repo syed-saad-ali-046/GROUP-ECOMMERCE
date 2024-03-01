@@ -1,6 +1,5 @@
 [build]
 base = "frontend" # Set the base directory for the frontend code
-publish = "frontend/build" # Set the directory to publish (build output of frontend)
 CI = "npm run build" # The command to build your frontend
 
 [build.environment]
