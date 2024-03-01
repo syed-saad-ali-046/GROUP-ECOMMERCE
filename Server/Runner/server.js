@@ -19,13 +19,13 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 // Use the cors middleware with specific options
-//const corsOptions = {
+const corsOptions = {
  origin: 'https://fypfrontend.vercel.app', // Replace with your frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable cookies and credentials for cross-origin requests
     optionsSuccessStatus: 204, // No Content for preflight requests
 };
-//
+
 app.use(cors(corsOptions));
 
 app.use(express.json());
