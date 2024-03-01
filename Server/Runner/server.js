@@ -8,12 +8,10 @@ const userRoute = require('../Routes/userRoute');
 const profilepicRoute= require('../Routes/profilepicRoute');
 const crypto = require('crypto');
 
-const app = express();
 
 
-app.all('/', (req, res) => {
-  res.send('Result: [OK].');
-});
+
+
 
 const generateRandomString = () => {
     return crypto.randomBytes(32).toString('hex');
@@ -59,4 +57,8 @@ app.use('/api/user', profilepicRoute)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+});
+
+app.all('/', (req, res) => {
+  res.send('Result: [OK].');
 });
