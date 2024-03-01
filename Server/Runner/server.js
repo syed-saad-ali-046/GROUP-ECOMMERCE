@@ -8,6 +8,12 @@ const userRoute = require('../Routes/userRoute');
 const profilepicRoute= require('../Routes/profilepicRoute');
 const crypto = require('crypto');
 
+const server = express();
+
+server.all(`/`, (req, res) => {
+  res.send(`Result: [OK].`);
+});
+
 const generateRandomString = () => {
     return crypto.randomBytes(32).toString('hex');
 };
