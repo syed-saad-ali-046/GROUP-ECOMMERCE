@@ -1,11 +1,11 @@
 const express = require('express');
-const mongoose = require('./Config/database');
+const mongoose = require('../Config/database');
 const session = require('express-session');
 const cors = require('cors');
-const signupRoutes = require('./Routes/signupRoutes');
-const signinRoutes = require('./Routes/signinRoutes');
-const userRoute = require('./Routes/userRoute');
-const profilepicRoute= require('./Routes/profilepicRoute');
+const signupRoutes = require('../Routes/signupRoutes');
+const signinRoutes = require('../Routes/signinRoutes');
+const userRoute = require('../Routes/userRoute');
+const profilepicRoute= require('../Routes/profilepicRoute');
 const crypto = require('crypto');
 
 const generateRandomString = () => {
